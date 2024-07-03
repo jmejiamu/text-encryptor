@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Encryption and Decryption</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <img src="./assets/Vector.png" alt="logo" />
+      </nav>
+    </header>
+    <main class="presentation">
+      <section class="presentation__content">
+        <textarea
+          class="input"
+          id="inputText"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+        <div>
+          <div class="buttons__container__icon">
+            <img src="./assets/bi_exclamation-circle-fill.png" alt="btn-icon" />
+            <p class="buttons__container__text">
+              Solo letras minúsculas y sin acentos
+            </p>
+          </div>
+          <div class="buttons__container">
+            <button class="buttons__container__encrypt" onclick="encryptText()">
+              Encrypt
+            </button>
+            <button class="buttons__container__decrypt" onclick="decryptText()">
+              Decrypt
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="presentation__output">
+        <div id="outputText">
+          <img
+            class="presentation__output__image"
+            src="./assets/img-no-output.png"
+            alt="img-no-output"
+          />
+          <h3 class="presentation__output__title">
+            Ningún mensaje fue encontrado
+          </h3>
+          <p class="presentation__output__subtext">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+        <div id="hiddenButton"></div>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
