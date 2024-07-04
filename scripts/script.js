@@ -23,7 +23,7 @@ function encryptText() {
   let content = document.querySelector(".presentation__output__content");
   content.style.display = "flex";
   content.style.flexDirection = "column";
-  content.style.height = "70vh";
+  // content.style.height = "70vh";
 
   // remove the style from the output text  aligned to the center
   const element = document.querySelector(".presentation__output");
