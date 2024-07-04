@@ -60,8 +60,6 @@ body {
 
 .buttons__container {
   display: flex;
-  justify-content: column;
-  align-items: center;
   gap: 24px;
   margin-top: 16px;
 }
@@ -178,5 +176,15 @@ body {
     width: 100%;
     margin-top: 0;
     height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .buttons__container {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .presentation__output {
+    margin-top: 50%;
   }
 }
