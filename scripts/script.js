@@ -1,5 +1,9 @@
 function encryptText() {
   const inputText = document.getElementById("inputText").value;
+  if (inputText.length === 0) {
+    alert("Please enter some text to encrypt.");
+    return;
+  }
   const shift = 3; // Number of positions to shift the characters
   let encryptedText = "";
 
@@ -23,7 +27,6 @@ function encryptText() {
   let content = document.querySelector(".presentation__output__content");
   content.style.display = "flex";
   content.style.flexDirection = "column";
-  // content.style.height = "70vh";
 
   // remove the style from the output text  aligned to the center
   const element = document.querySelector(".presentation__output");
@@ -37,8 +40,13 @@ function encryptText() {
 
 function decryptText() {
   const inputText = document.getElementById("outputText").innerText;
+  const inputTextValue = document.getElementById("inputText").value;
   const shift = 3; // Number of positions to shift the characters back
   let decryptedText = "";
+  if (inputTextValue.length === 0) {
+    alert("Please encrypt some text first.");
+    return;
+  }
 
   for (let i = 0; i < inputText.length; i++) {
     let charCode = inputText.charCodeAt(i);
